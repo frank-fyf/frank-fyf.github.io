@@ -1,9 +1,184 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Frank's Homepage</title>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=1200, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>HomePage - Yunfei Fan</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            background: var(--primary-color);
+            color: white;
+            margin-bottom: 2rem;
+        }
+        .profile-section {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+        }
+        .achievements {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .project-list {
+            list-style: none;
+            padding: 0;
+        }
+        .project-item {
+            padding: 1rem;
+            border-left: 3px solid var(--accent-color);
+            margin-bottom: 1.5rem;
+            background: #f8f9fa;
+        }
+        .project-date {
+            color: #666;
+            font-size: 0.9em;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-  <h1>Welcome to Frank's GitHub Pages!</h1>
+    <header>
+        <div class="container">
+            <h1>Yunfei Fan(范云飞)</h1>
+            <p>AI Developer | Open Source Contributors</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="profile-section">
+            <img src="personalPhoto1.jpg" alt="个人头像" class="avatar">
+            <div>
+                <h2>Personal Info</h2>
+                <p>Up to now (2025.5), I have been employed by PICO (is a part of ByteDance Inc.) almost 3.5 years. With a decade-long career in robotics, autonomous systems and VR/AR, my core expertise centers on three principal domains:</p>
+                <ul class="expertise-list">
+                  <li>
+                    <strong>(Lidar)-Visual-Inertial SLAM Systems</strong> development for VR, UAVs and autonomous vehicles
+                  </li>
+                  <li>
+                    <strong>UAV Flight Control Systems</strong> encompassing:
+                    <ul class="sub-list">
+                      <li>Multi-sensor fusion (IMU/GNSS/Vision/Compass/Barometer)</li>
+                      <li>Navigation stack optimization (including high precision landing/takeoff)</li>
+                      <li>Some classical control algorithms</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Machine Learning Integration</strong> to support prediction
+                  </li>
+                </ul>
+                <p>🔧 Technical Stack：</p>
+                <ul class="expertise-list">
+                  <li>
+                    C++ (including NEON / SSE) / Python
+                  </li>
+                  <li>
+                    ROS / Docker / Gazebo
+                  </li>
+                  <li>
+                    Matlab (Simulink, MDB, HIL, Stateflow Code Generation)
+                  </li>
+                  <li>
+                    OpenCV / Eigen / Ceres-Solver / PCL / EKF
+                  </li>
+                </ul>
+
+                <p>Academic Volunteer (Reviewer): </p>
+                <ul class="expertise-list">
+                  <li>
+                    IEEE RA-L, NeurIPS'2025, ICRA'2025, ICPR'2024
+                  </li>
+                </ul>
+
+
+                
+            </div>
+        </section>
+
+        <section class="achievements">
+            <h2>Publication</h2>
+            <ul class="project-list">
+                <li class="project-item">
+                    <h3>SchurVINS: Schur Complement-Based Lightweight Visual Inertial Navigation System</h3>
+                    <div class="project-date"><strong>First Author</strong>, 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR'2024)</div>
+                    <li>
+                      • Key Contributions:
+                      <ul class="sub-list">
+                        <li>An equivalent residual model is proposed to deal with hyper high-dimension observations, which consists of gradient, Hessian and the corresponding observation covariance. This method is of great generality in EKF systems.</li>
+                        <li>A lightweight EKF-based landmark solver is proposed to estimate position of landmarks with high efficiency.</li>
+                        <li>A novel EKF-based VINS framework is developed to achieve ego-motion and landmark estimation simultaneously with high accuracy and efficiency.</li>
+                      </ul>
+                    </li
+                    <p>•  Arxiv： <a href="https://arxiv.org/pdf/2312.01616">arxiv.org/pdf/2312.01616</a><br>
+                    • GitHub: <a href="https://github.com/bytedance/SchurVINS">github.com/bytedance/SchurVINS</a></p>
+                </li>
+                <li class="project-item">
+                    <h3>Universal Online Temporal Calibration for Optimization-based Visual-Inertial Navigation Systems</h3>
+                    <div class="project-date"><strong>First Author</strong>, 2025 IEEE International Conference on Robotics and Automation (ICRA'2025) </div>
+                    <li>
+                      • Key Contributions:
+                      <ul class="sub-list">
+                        <li>A universal online temporal calibration strategy for optimization-based VINS algorithms is proposed.</li>
+                        <li>The proposed approach is integrated into the existing VINS framework to validate its feasibility.</li>
+                        <li>Comprehensive experiments are conducted to assess its impact on accuracy.</li>
+                      </ul>
+                    </li
+                    <p>•  Arxiv： <a href="https://arxiv.org/pdf/2312.01616">arxiv.org/pdf/2312.01616</a><br>
+                    • GitHub: <a href="https://github.com/bytedance/Ts_Online_Optimization">github.com/bytedance/Ts_Online_Optimization</a></p>
+                </li>
+                <li class="project-item">
+                    <h3>
+                        Stereo Visual Inertial Odometry with Online Baseline Calibration</h3>
+                    <div class="project-date"><strong>First Author</strong>, 2020 IEEE International Conference on Robotics and Automation (ICRA'2020)</div>
+                    <li>
+                      • Key Contributions:
+                      <ul class="sub-list">
+                        <li>A stereo VIO algorithm with online baseline estimation to overcome inaccurate stereo calibration.</li>
+                        <li>Evaluation on EuRoC to verify its effectiveness.</li>
+                      </ul>
+                    </li
+                    <p>•  Link： <a href="https://ieeexplore.ieee.org/document/9197581">ieeexplore.ieee.org/document/9197581</a></p>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Code a better life</p>
+            <p>📧 fyf0710@163.com | 💻 <a href="https://github.com/frank-fyf">https://github.com/frank-fyf</a></p>
+        </div>
+    </footer>
 </body>
 </html>
