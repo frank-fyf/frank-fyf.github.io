@@ -66,6 +66,10 @@
             padding: 2rem;
             color: #666;
         }
+        .expertise-list, .sub-list, .sub-list-2 {
+            list-style-type: none;
+            padding-left: 30px;
+        }
     </style>
 </head>
 <body>
@@ -81,24 +85,59 @@
             <img src="personalPhoto1.jpg" alt="个人头像" class="avatar">
             <div>
                 <h2>Personal Info</h2>
+                <span style="font-weight: 900; color: #FF4500; font-size: 1.2em;">
+                    I am finding a New Job now!
+                </span>
                 <p>Up to now (2025.5), I have been employed by PICO (is a part of ByteDance Inc.) almost 3.5 years. With a decade-long career in robotics, autonomous systems and VR/AR, my core expertise centers on three principal domains:</p>
                 <ul class="expertise-list">
                   <li>
-                    <strong>(Lidar)-Visual-Inertial SLAM Systems</strong> development for VR, UAVs and autonomous vehicles
-                  </li>
-                  <li>
-                    <strong>UAV Flight Control Systems</strong> encompassing:
+                    <strong>(Lidar)-Visual-Inertial SLAM Systems</strong>
                     <ul class="sub-list">
-                      <li>Multi-sensor fusion (IMU/GNSS/Vision/Compass/Barometer)</li>
-                      <li>Navigation stack optimization (including high precision landing/takeoff)</li>
-                      <li>Some classical control algorithms</li>
+                      <li>UAV(Unmanned Aerial Vehicle): Camera + IMU + GPS.</li>
+                      <li>AV(Autonomous Vehicle): Lidar + Camera + IMU + GPS + Wheel Encoder.</li>
+                      <li>VR(Virtual Reality): Camera + IMU.</li>
+                      <li>Academic Achievement: 3 top-conference paper with first author.</li>
+                      
                     </ul>
                   </li>
                   <li>
-                    <strong>Machine Learning Integration</strong> to support prediction
+                    <strong>UAV Localization + Perception + Control</strong>
+                    <ul class="sub-list">
+                      <li>Localizer(Multi-Sensor Fusion)</li>
+                        <ul class="sub-list-2">
+                            <li>Main Sensors: IMU, GNSS, Camera, Compass, Barometer.</li>
+                            <li>Feature: Triple Redundancy Localization.</li>
+                        </ul>
+                      <li>Perception Obstacle Avoidance</li>
+                        <ul class="sub-list-2">
+                            <li>Dense depth mapping with stereo camera for obstacle avoidance.</li>
+                            <li>Obstacle Avoidance: Employ Dijkstra, A* or JPS to search a short path for bypassing the obstacle.</li>
+                        </ul>
+                      <li>Navigator and Controller</li>
+                        <ul class="sub-list-2">
+                            <li>Navigator: Employ Matlab + Simulink + Stateflow to design the Navigation strategy, and then generate the corresponding C++ code.</li>
+                            <li>Controller: Employ ADRC and modified PID algo to construct the controller of Flight Control.</li>
+                        </ul>
+                      <li>SIL + HIL Simulation</li>
+                        <ul class="sub-list-2">
+                            <li>Before testing with UAV devices, these above Localizer, Navigator and Controller are first simulated with Gazebo by SIL and HIL strategy.</li>
+                        </ul>
+                      <li>All-Weather Precision Take off/Landing Solution</li>
+                        <ul class="sub-list-2">
+                            <li>IR/QR marker solution.</li>
+                        </ul>
+                      </ul>
+                  </li>
+                  <li>
+                    <strong>Traditional Machine Learning</strong>
+                        <ul class="sub-list-2">
+                            <li>Regression: Employ Regression method to conduct prediction.</li>
+                            <li>Recognition: Employ Fast-RCNN to conduct mark recognition.</li>
+                            <li>Data Enhancement: Employ warp, rotation, add noise, partial mask... to enhance train data of Fast-RCNN.</li>
+                        </ul>
                   </li>
                 </ul>
-                <p>🔧 Technical Stack：</p>
+                <p>🔧 Technical Stack Tools：</p>
                 <ul class="expertise-list">
                   <li>
                     C++ (including NEON / SSE) / Python
@@ -110,7 +149,10 @@
                     Matlab (Simulink, MDB, HIL, Stateflow Code Generation)
                   </li>
                   <li>
-                    OpenCV / Eigen / Ceres-Solver / PCL / EKF
+                    OpenCV / Ceres-Solver / Eigen / PCL / EKF
+                  </li>
+                  <li>
+                    Pytorch
                   </li>
                 </ul>
 
